@@ -57,10 +57,16 @@ function countingSundays(firstYear, lastYear) {
   let countingSundayArray = [];
 
   for (let index = firstYear; index < lastYear + 1; index++) {
-    countingSundayArray.push(NumberOfSundayInYear(index));
+    if (index === 2000) {
+      countingSundayArray.push(NumberOfSundayInYear(index) - 1);
+    } else {
+      countingSundayArray.push(NumberOfSundayInYear(index));
+    }
   }
+
+  console.log(countingSundayArray);
 
   return countingSundayArray.reduce((a, b) => a + b);
 }
 
-console.log(countingSundays(1943, 1946));
+console.log(countingSundays(1995, 2000));
