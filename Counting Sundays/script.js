@@ -64,8 +64,6 @@ function countingSundays(firstYear, lastYear) {
     }
   }
 
-  console.log(countingSundayArray);
-
   return countingSundayArray.reduce((a, b) => a + b);
 }
 
